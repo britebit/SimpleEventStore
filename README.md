@@ -55,7 +55,7 @@ Catch up subscriptions allow you to subscribe to events after they have been wri
 Storing the checkpoint allows you to resume a subscription in the case of process failure and should only be done once all events supplied in the callback have been processed.  This ensures that events are not missed.
 
 It is possible to have multiple catch up subscriptions running, for example to
-- Publish messages onto a service bus
+i- Publish messages onto a service bus
 - Populate a read model
 
 Each subscription **must** perform an independant task.  It is not possible to run multiple instances of the same catch up subscription as it would mean high amounts of duplicate processing as each process instance would read the same checkpoint.
@@ -110,7 +110,7 @@ Allows you to configure the following aspects for catch up subscriptions
 Sets up callbacks per Cosmos DB operation performed.  This is useful if you want to record per call data e.g. RU cost of each operation.
 
 ### UseTypeMap
-Allows you to control the event body/metadata type names.  Bult in implementations
+Allows you to control the event body/metadata type names.  Built in implementations
 - DefaultSerializationTypeMap - uses the AssemblyQualifiedName of the type. (default)
 - ConfigurableSerializationTypeMap - provides full control.
 
